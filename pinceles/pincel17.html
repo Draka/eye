@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        margin: 0;
+      }
+      canvas {
+        border: 2px solid black;
+      }
+    </style>
+</head>
+
+<body>
+    <canvas id="c" width="500" height="300"></canvas>
+    <script>
+
+var el = document.getElementById('c');
+var ctx = el.getContext('2d');
+var isDrawing;
+
+el.onmousedown = function(e) {
+  isDrawing = true;
+  ctx.lineWidth = 10;
+  ctx.lineJoin = ctx.lineCap = 'round';
+  ctx.shadowBlur = 10;
+  ctx.shadowColor = 'rgb(0, 0, 0)';
+  ctx.moveTo(e.clientX, e.clientY);
+};
+el.onmousemove = function(e) {
+  if (isDrawing) {
+    ctx.lineTo(e.clientX, e.clientY);
+    ctx.stroke();
+  }
+};
+el.onmouseup = function() {
+  isDrawing = false;
+};
+    </script>
+</body>
+
+</html>
