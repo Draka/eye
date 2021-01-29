@@ -1,0 +1,138 @@
+html, body {
+    height: 100%;
+    font-size: 16px;
+    overflow: hidden;
+}
+.hide {
+    display: none;
+}
+.relative {
+    position: relative;
+    height: 100%;
+}
+.page1{
+    background-color: #f16f65;
+    cursor: pointer;
+}
+
+/* content-page1 */
+
+.content-page1 .eye-i,
+.content-page1 .eye-d,
+.content-page1 .text,
+.content-page1 .form,
+.content-page1 .page-btn {
+    position: absolute;
+    transition: all 0.3s ease-in;
+}
+.content-page1 .eye-i,
+.content-page1 .eye-d{
+    width: 38vw;
+    top: calc(50% - 18vw);
+    height: 5em;
+}
+.content-page1 .text {
+    width: 100%;
+    top: calc(50% - 50vw);
+    left: 0;
+    text-align: center;
+}
+.content-page1 .text img{
+    width: 70vw;
+}
+
+.content-page1 .eye-i {
+    left: 0;
+}
+.content-page1 .eye-d {
+    right: 0;
+}
+
+.content-page1 .form {
+    width: 100%;
+    bottom: 3.8em;
+    left: 0;
+    text-align: center;
+}
+.content-page1 .input {
+    background-color: #f1eade;
+    padding: 1em 2em;
+    border: 0;
+    border-radius: 2em;
+    font-size: 2em;
+    max-width: 80%;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    outline: 0;
+}
+
+.content-page1 .page-btn {
+    height: 4em;
+    bottom: 1em;
+    text-align: center;
+    width: 100%;
+    left: 0;
+}
+.content-page1 .page-btn img{
+    height: 100%;
+    cursor: pointer;
+}
+
+
+@media (min-width: 576px){
+    .content-page1 .eye-i,
+    .content-page1 .eye-d {
+        height: 6.5em;
+        top: calc(50% - 3.25em);
+    }
+    .content-page1 .text {
+        top: calc(50% - 10em);
+    }
+    .content-page1 .text img{
+        height: 5em;
+    }
+}
+@media (min-width: 768px){
+    .content-page1 .eye-i,
+    .content-page1 .eye-d {
+        width: auto;
+        height: 9em;
+        top: calc(50% - 4.5em);
+    }
+    .content-page1 .text {
+        top: calc(50% - 10em);
+    }
+    .content-page1 .text img{
+        width: 21em;
+    }
+}
+@media (min-width: 992px){
+    .content-page1 .eye-i,
+    .content-page1 .eye-d {
+        width: auto;
+        height: 13em;
+        top: calc(50% - 6.5em);
+    }
+    .content-page1 .text {
+        top: calc(50% - 12em);
+    }
+    .content-page1 .text img{
+        width: 21em;
+    }
+}
+@media (min-width: 1200px){
+    .content-page1 .eye-i,
+    .content-page1 .eye-d {
+        width: auto;
+        height: 14em;
+        top: calc(50% - 7em);
+    }
+    .content-page1 .text {
+        top: calc(50% - 13em);
+    }
+    .content-page1 .text img{
+        width: 24em;
+    }
+}
