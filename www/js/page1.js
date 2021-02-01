@@ -40,3 +40,18 @@ $(document).on('click', function(){
         })
     }
 })
+
+$('#btn-continuar').on('click', function(){
+    if (step === 3){
+        if (!$('#name').val()) return;
+
+        actions = true
+        $('body').addClass('page2')
+        $('.content-page1').hide('slow', function(){
+            $('.content-page2').show('slow', function(){
+                actions = false
+                step = 4
+            })
+        })
+    }
+})
