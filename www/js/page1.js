@@ -35,7 +35,7 @@ $(document).on('click', function(){
                 actions = false
                 step = 3
             })
-            $('.content-page1 .form, .content-page1 .page-btn').slideDown('slow', function(){
+            $('.content-page1 .form, .content-page1 .nombreing, .content-page1 .page-btn').slideDown('slow', function(){
             })
         })
     }
@@ -48,9 +48,30 @@ $('#btn-continuar').on('click', function(){
         actions = true
         $('body').addClass('page2')
         $('.content-page1').hide('slow', function(){
+            $('.content-page2 .page-btn2').hide()
             $('.content-page2').show('slow', function(){
-                actions = false
-                step = 4
+                $('#terms').on('change', function(){
+                    if(this.checked){
+                        $('.content-page2 .page-btn2').slideDown('slow', function(){
+                            actions = false
+                            step = 4
+                        })
+                    }else{
+                        $('.content-page2 .page-btn2').hide('fast')
+                    }
+                })
+            })
+        })
+    }
+})
+
+$('#btn-continuar2').on('click', function(){
+    if(step === 4){
+        actions = true;
+        $('body').addClass('page3')
+        $('.content-page2').hide('slow', function(){
+            $('.content-page3').show('slow', function(){
+
             })
         })
     }
