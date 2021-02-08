@@ -15,11 +15,6 @@ html, body {
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
-.page3{
-    background-color: #8c3c64;
-    cursor: pointer;
-    transition: all 0.3s ease-in;
-}
 
 /* content-page1 */
 
@@ -101,73 +96,6 @@ html, body {
     left: 0;
 }
 .content-page1 .page-btn img{
-    height: 100%;
-    cursor: pointer;
-}
-
-/* content-page3 */
-.content-page3 .fig,
-.content-page3 .dot,
-.content-page3 .fig,
-.content-page3 .eye-cal,
-.content-page3 .text7,
-.content-page3 .page-btn3{
-    position: absolute;
-    transition: all 0.3s ease-in;
-}
-
-.content-page3 .fig{
-    height: 500px;
-    width: 500px;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.content-page3 .dot {
-    height: 500px;
-    width: 500px;
-    background-color: #1c1414;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.content-page3 .eye-cal {
-    max-height: 57px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top: 57px;
-}
-
-.content-page3 .text7 {
-    position: absolute;
-    color:white;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
-    width: 350px;
-    height: 200px;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    line-height: 1.3;
-}
-
-.content-page3 .page-btn3 {
-    height: 4em;
-    bottom: 42px;
-    text-align: center;
-    width: 100%;
-    left: 0;
-}
-.content-page3 .page-btn3 img{
     height: 100%;
     cursor: pointer;
 }
