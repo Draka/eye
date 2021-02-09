@@ -14,32 +14,26 @@ parpadeo()
 var step = 1
 var actions = false
 
-$(document).on('click', function(){
-    if (actions) {
-        return
-    }
-    // hace la animación y evita clicks erroneos
-    if (step === 1){
-        actions = true
-        $('.content-page1 .text1').hide('slow', function(){
-            $('.content-page1 .text2').show('slow', function(){
-                actions = false
-                step = 2
-            })
+setTimeout(function(){
+    $('.content-page1 .text1').hide('slow', function(){
+        $('.content-page1 .text2').show('slow', function(){
+            actions = false
+            step = 2
+            if(step === 2){
+                setTimeout(function(){
+                    $('.content-page1 .text2').hide('slow', function(){
+                        $('.content-page1 .text3').show('slow', function(){
+                            actions = false
+                            step = 3
+                        })
+                        $('.content-page1 .form, .content-page1 .nombreing, .content-page1 .page-btn').slideDown('slow', function(){
+                        })
+                    })
+                }, 1500)
+            }
         })
-    }
-    if (step === 2){
-        actions = true
-        $('.content-page1 .text2').hide('slow', function(){
-            $('.content-page1 .text3').show('slow', function(){
-                actions = false
-                step = 3
-            })
-            $('.content-page1 .form, .content-page1 .nombreing, .content-page1 .page-btn').slideDown('slow', function(){
-            })
-        })
-    }
-})
+    })
+}, 1500)
 
 $('#btn-continuar').on('click', function(){
     if (step === 3){
@@ -56,8 +50,10 @@ $('#btn-continuar').on('click', function(){
                             actions = false
                             step = 4
                         })
+                        $('.content-page2 .dot').show()
                     }else{
-                        $('.content-page2 .page-btn2').hide('fast')
+                        $('.content-page2 .page-btn2').slideToggle('fast')
+                        $('.content-page2 .dot').hide()
                     }
                 })
             })

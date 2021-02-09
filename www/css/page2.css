@@ -20,6 +20,8 @@ html, body {
 .content-page2 .eye-cond,
 .content-page2 .text5,
 .content-page2 .check,
+.content-page2 .fig,
+.content-page2 .dot,
 .content-page2 .text6,
 .content-page2 .page-btn2{
     position: absolute;
@@ -55,6 +57,30 @@ html, body {
 }
 .content-page2 .check:checked {
     background-color: rgb(172, 67, 67);
+}
+
+.content-page2 .fig{
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    width: 0.8em;
+    height: 0.8em;
+}
+
+.content-page2 .dot{
+    background-color: #000000;
+    border-radius: 50%;
+    margin: auto;
+    top: 174px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 0.8em;
+    height: 0.8em;
+    pointer-events: none;
 }
 
 .content-page2 .text6 {
