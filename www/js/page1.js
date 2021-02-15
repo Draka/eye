@@ -67,7 +67,21 @@ $('#btn-continuar2').on('click', function(){
         $('body').addClass('page3')
         $('.content-page2').hide('slow', function(){
             $('.content-page3').show('slow', function(){
+                actions=false
+                step = 5
+            })
+        })
+    }
+})
 
+$('#btn-continuar3').on('click', function(){
+    if(step === 5){
+        actions = true;
+        $('body').addClass('page4')
+        $('.content-page3').hide('slow', function(){
+            $('.content-page4').show('slow', function(){
+                actions=false
+                step = 6
             })
         })
     }

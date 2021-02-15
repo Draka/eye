@@ -1,0 +1,141 @@
+html, body {
+    height: 100%;
+    font-size: 16px;
+    overflow: hidden;
+}
+.hide {
+    display: none;
+}
+.relative {
+    position: relative;
+    height: 100%;
+}
+.page4{
+    background-color: #454e72;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+@font-face{
+    font-family: myfont;
+    src: url(../fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+/* content-page4 */
+.content-page4 .text8,
+.content-page4 .eye,
+.content-page4 .eye-happy,
+.content-page4 .eye-bored,
+.content-page4 .eye-angry,
+.content-page4 .eye-optimistic,
+.content-page4 .text,
+.content-page4 .text9,
+.content-page4 .text10,
+.content-page4 .text11,
+.content-page4 .text12{
+    position: absolute;
+    transition: all 0.3s ease-in;
+}
+
+.content-page4 .text8{
+    position: absolute;
+    color:white;
+    text-align: center;
+    font-family: myFont;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 215px;
+    right: 0;
+    font-size: 27px;
+    width: 425px;
+    height: 200px;
+    line-height: 1.2;
+}
+
+.content-page4 .eye{
+    width: 100%;
+    height: 90px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+.content-page4 .eye-happy{
+    right: 300px;
+}
+.content-page4 .eye-bored{
+    right: 100px;
+}
+.content-page4 .eye-angry{
+    left: 100px;
+}
+.content-page4 .eye-optimistic{
+    left: 300px;
+}
+
+.content-page4 .text{
+    width: 100%;
+}
+.content-page4 .text9{
+    height: 35px;
+    margin: auto;
+    top: 190px;
+    left: 0;
+    bottom: 0;
+    right: 605px;
+}
+.content-page4 .text9 img{
+    width: 100%;
+    height: 100%;
+}
+.content-page4 .text10{
+    height: 35px;
+    margin: auto;
+    top: 190px;
+    left: 0;
+    bottom: 0;
+    right: 200px;
+}
+.content-page4 .text10 img{
+    width: 100%;
+    height: 100%;
+}
+.content-page4 .text11{
+    height: 35px;
+    margin: auto;
+    top: 190px;
+    left: 200px;
+    bottom: 0;
+    right: 0;
+}
+.content-page4 .text11 img{
+    width: 100%;
+    height: 100%;
+}
+.content-page4 .text12{
+    height: 35px;
+    margin: auto;
+    top: 190px;
+    left: 605px;
+    bottom: 0;
+    right: 0;
+}
+.content-page4 .text12 img{
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 576px){
+    
+}
+
+@media (min-width: 768px){
+    
+}
+
+@media (min-width: 992px){
+    
+}
+
+@media (min-width: 1200px){
+
+}
