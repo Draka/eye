@@ -67,7 +67,7 @@ $('#btn-continuar2').on('click', function(){
         $('body').addClass('page3')
         $('.content-page2').hide('slow', function(){
             $('.content-page3').show('slow', function(){
-                actions=false
+                actions = false
                 step = 5
             })
         })
@@ -76,12 +76,25 @@ $('#btn-continuar2').on('click', function(){
 
 $('#btn-continuar3').on('click', function(){
     if(step === 5){
-        actions = true;
+        actions = true
         $('body').addClass('page4')
         $('.content-page3').hide('slow', function(){
             $('.content-page4').show('slow', function(){
-                actions=false
+                actions = false
                 step = 6
+                /*función temporal para cambiar de pantalla*/
+                /*if(step === 6){
+                    actions = true
+                    setTimeout(function(){
+                        $('body').addClass('page5')
+                        $('.content-page4').hide('slow', function(){
+                            $('.content-page5').show('slow', function(){
+                                actions = false
+                                step = 7
+                            })
+                        })
+                    }, 500)
+                }*/
             })
         })
     }
