@@ -1,0 +1,122 @@
+html, body {
+    height: 100%;
+    font-size: 16px;
+    overflow: hidden;
+}
+.hide {
+    display: none;
+}
+.relative {
+    position: relative;
+    height: 100%;
+}
+.page7{
+    background-color: rgb(162, 154, 204);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+@font-face{
+    font-family: myfont;
+    src: url(../fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+.content-page7 .eye-opciones,
+.content-page7 .text14,
+.content-page7 .opcion,
+.content-page7 .opcion1,
+.content-page7 .opcion2,
+.content-page7 .opcion3,
+.content-page7 .bar
+.content-page7 .textop,
+.content-page7 .text15,
+.content-page7 .text16,
+.content-page7 .text17{
+    position: absolute;
+    transition: all 0.3s ease-in;
+}
+
+.content-page7 .eye-opciones{
+    max-height: 900px;
+    height: 32em;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.content-page7 .text14{
+    position: absolute;
+    color:white;
+    text-align: center;
+    font-family: myFont;
+    font-size: 23px;
+    width: 270px;
+    height: 200px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    line-height: 1.1;
+}
+
+.content-page7 .opcion{
+    height: 150px;
+    width: 200px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.content-page7 .opcion1{
+    top: 280px;
+}
+.content-page7 .opcion2{
+    top: 315px;
+}
+.content-page7 .opcion3{
+    top: 350px;
+}
+
+.content-page7 .bar{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.content-page7 .text15{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    font-size: 20px;
+    color:white;
+    text-align: center;
+    font-family: myFont;
+    top: 60px;
+    z-index: 1;
+}
+
+.content-page7 .text16{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    font-size: 20px;
+    color:white;
+    text-align: center;
+    font-family: myFont;
+    top: 60px;
+    z-index: 1;
+}
+
+.content-page7 .text17{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    font-size: 20px;
+    color:white;
+    text-align: center;
+    font-family: myFont;
+    top: 60px;
+    z-index: 1;
+}

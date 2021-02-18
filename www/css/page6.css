@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+    font-size: 16px;
+    overflow: hidden;
+}
+.hide {
+    display: none;
+}
+.relative {
+    position: relative;
+    height: 100%;
+}
+.page6{
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.content-page6 .canvas,
+.content-page6 .eye-canvas{
+    position: absolute;
+    transition: all 0.3s ease-in;
+}
+
+.content-page6 .canvas{
+    height: 580px;
+    width: 1000px;
+    border: black 1px solid;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.content-page6 .eye-canvas{
+    height: 80px;
+    top: 0px;
+    right: -50px;
+}

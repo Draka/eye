@@ -29,11 +29,11 @@ setTimeout(function(){
                         $('.content-page1 .form, .content-page1 .nombreing, .content-page1 .page-btn').slideDown('slow', function(){
                         })
                     })
-                }, 1500)
+                }, 500)
             }
         })
     })
-}, 1500)
+}, 500)
 
 $('#btn-continuar').on('click', function(){
     if (step === 3){
@@ -41,21 +41,20 @@ $('#btn-continuar').on('click', function(){
 
         actions = true
         $('body').addClass('page2')
-        $('.content-page1').hide('slow', function(){
-            $('.content-page2 .page-btn2').hide()
-            $('.content-page2').show('slow', function(){
-                $('#terms').on('change', function(){
-                    if(this.checked){
-                        $('.content-page2 .page-btn2').slideDown('slow', function(){
-                            actions = false
-                            step = 4
-                        })
-                        $('.content-page2 .dot').show()
-                    }else{
-                        $('.content-page2 .page-btn2').slideToggle('fast')
-                        $('.content-page2 .dot').hide()
-                    }
-                })
+        document.getElementById("page1id").setAttribute("style","opacity:0.5; -moz-opacity:0.5; filter:alpha(opacity=50)");
+        $('.content-page2 .page-btn2').hide()
+        $('.content-page2').show('slow', function(){
+            $('#terms').on('change', function(){
+                if(this.checked){
+                    $('.content-page2 .page-btn2').slideDown('slow', function(){
+                        actions = false
+                        step = 4
+                    })
+                    $('.content-page2 .dot').show()
+                }else{
+                    $('.content-page2 .page-btn2').slideToggle('fast')
+                    $('.content-page2 .dot').hide()
+                }
             })
         })
     }
@@ -65,6 +64,7 @@ $('#btn-continuar2').on('click', function(){
     if(step === 4){
         actions = true;
         $('body').addClass('page3')
+        $('.content-page1').hide('slow')
         $('.content-page2').hide('slow', function(){
             $('.content-page3').show('slow', function(){
                 actions = false
@@ -83,7 +83,7 @@ $('#btn-continuar3').on('click', function(){
                 actions = false
                 step = 6
                 /*función temporal para cambiar de pantalla*/
-                /*if(step === 6){
+                if(step === 6){
                     actions = true
                     setTimeout(function(){
                         $('body').addClass('page5')
@@ -91,10 +91,35 @@ $('#btn-continuar3').on('click', function(){
                             $('.content-page5').show('slow', function(){
                                 actions = false
                                 step = 7
+                                /*funcion temporal para cambiar de pantalla*/
+                                if(step === 7){
+                                    actions = true
+                                    setTimeout(function(){
+                                        $('body').addClass('page6')
+                                        $('.content-page5').hide('slow', function(){
+                                            $('.content-page6').show('slow', function(){
+                                                actions = false
+                                                step = 8
+                                                /*funcion temporal para cambiar de pantalla*/
+                                                if(step === 8){
+                                                    actions = true
+                                                    setTimeout(function(){
+                                                        $('body').addClass('page7')
+                                                            document.getElementById("page6id").setAttribute("style","opacity:0.5; -moz-opacity:0.5; filter:alpha(opacity=50)");
+                                                        $('.content-page7').show('slow', function(){
+                                                            actions = false
+                                                            step = 9
+                                                        })
+                                                    }, 500)
+                                                }
+                                            })
+                                        })
+                                    }, 500)
+                                }
                             })
                         })
                     }, 500)
-                }*/
+                }
             })
         })
     }

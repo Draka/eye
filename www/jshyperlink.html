@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas to png and jpeg</title>
+    </head>
+    <body>
+        <h1>HTML5 canvas to image</h1>
+        <button type="button"   id="botonDescarga">Descargar</button>
+        <canvas id="myCanvas" width="400" height="250" style="border: 2px solid black; float: left;"></canvas>
+
+        <script>
+            const btndes = document.querySelector("#botonDescarga");
+            const mc = document.querySelector("#myCanvas");
+            const ctx = mc.getContext("2d");
+
+            ctx.font = "50px Roboto";
+            ctx.fillStyle = "red";
+            ctx.fillText("dcode", 100, 100);
+            ctx.fillRect(200, 150, 150, 75);
+
+            /*Event listener para el botón de descarga*/
+            btndes.addEventListener("click", function(){
+                if(window.navigator.msSaveBlob){
+                    window.navigator.msSaveBlob(mc.msToBlob(), "Painting.jpeg");
+                } else{
+                    const a = document.createElement("a");
+                    document.body.appendChild(a);
+                    a.href = mc.toDataURL();
+                    a.download = "Painting.jpeg";
+                    a.click();
+                    document.body.removeChild(a);
+                }
+            });
+        </script>
+    </body>
+</html>
