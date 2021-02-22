@@ -105,10 +105,36 @@ $('#btn-continuar3').on('click', function(){
                                                     actions = true
                                                     setTimeout(function(){
                                                         $('body').addClass('page7')
-                                                            document.getElementById("page6id").setAttribute("style","opacity:0.5; -moz-opacity:0.5; filter:alpha(opacity=50)");
+                                                        document.getElementById("page6id").setAttribute("style","opacity:0.5; -moz-opacity:0.5; filter:alpha(opacity=50)");
                                                         $('.content-page7').show('slow', function(){
                                                             actions = false
                                                             step = 9
+                                                        /*funcion temporal para cambiar de pantalla*/
+                                                        if(step === 9){
+                                                            actions = true
+                                                            setTimeout(function(){
+                                                                $('body').addClass('page8')
+                                                                $('.content-page7').hide('slow', function(){
+                                                                    $('.content-page8').show('slow', function(){
+                                                                        actions = false
+                                                                        step = 10
+                                                                        /*funcion temporal para cambiar de pantalla*/
+                                                                        if(step === 10){
+                                                                            actions = true
+                                                                            setTimeout(function(){
+                                                                                $('body').addClass('page9')
+                                                                                $('.content-page8').hide('slow', function(){
+                                                                                    $('.content-page9').show('slow', function(){
+                                                                                        actions = false
+                                                                                        step = 11
+                                                                                    })
+                                                                                })
+                                                                            }, 500)
+                                                                        }
+                                                                    })
+                                                                })
+                                                            }, 500)
+                                                        }
                                                         })
                                                     }, 500)
                                                 }
