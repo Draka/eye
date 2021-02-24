@@ -29,11 +29,11 @@ setTimeout(function(){
                         $('.content-page1 .form, .content-page1 .nombreing, .content-page1 .page-btn').slideDown('slow', function(){
                         })
                     })
-                }, 500)
+                }, 5000)
             }
         })
     })
-}, 500)
+}, 5000)
 
 $('#btn-continuar').on('click', function(){
     if (step === 3){
@@ -129,22 +129,22 @@ $('#btn-continuar3').on('click', function(){
                                                                                         step = 11
                                                                                     })
                                                                                 })
-                                                                            }, 500)
+                                                                            }, 7000)
                                                                         }
                                                                     })
                                                                 })
-                                                            }, 500)
+                                                            }, 7000)
                                                         }
                                                         })
-                                                    }, 500)
+                                                    }, 7000)
                                                 }
                                             })
                                         })
-                                    }, 500)
+                                    }, 7000)
                                 }
                             })
                         })
-                    }, 500)
+                    }, 7000)
                 }
             })
         })
