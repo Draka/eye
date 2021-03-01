@@ -77,12 +77,24 @@ $('#btn-continuar2').on('click', function(){
 $('#btn-continuar3').on('click', function(){
     if(step === 5){
         actions = true
+        $('body').addClass('calibrationTest')
+        $('.content-page3').hide('slow', function(){
+            $('.calibrationTest').show('slow', function(){
+                actions = false
+                step = 6
+            })
+        })
+    }
+})
+/*
+$('#btn-continuar3').on('click', function(){
+    if(step === 5){
+        actions = true
         $('body').addClass('page4')
         $('.content-page3').hide('slow', function(){
             $('.content-page4').show('slow', function(){
                 actions = false
                 step = 6
-                /*función temporal para cambiar de pantalla*/
                 if(step === 6){
                     actions = true
                     setTimeout(function(){
@@ -91,7 +103,6 @@ $('#btn-continuar3').on('click', function(){
                             $('.content-page5').show('slow', function(){
                                 actions = false
                                 step = 7
-                                /*funcion temporal para cambiar de pantalla*/
                                 if(step === 7){
                                     actions = true
                                     setTimeout(function(){
@@ -100,7 +111,6 @@ $('#btn-continuar3').on('click', function(){
                                             $('.content-page6').show('slow', function(){
                                                 actions = false
                                                 step = 8
-                                                /*funcion temporal para cambiar de pantalla*/
                                                 if(step === 8){
                                                     actions = true
                                                     setTimeout(function(){
@@ -109,7 +119,6 @@ $('#btn-continuar3').on('click', function(){
                                                         $('.content-page7').show('slow', function(){
                                                             actions = false
                                                             step = 9
-                                                        /*funcion temporal para cambiar de pantalla*/
                                                         if(step === 9){
                                                             actions = true
                                                             setTimeout(function(){
@@ -118,7 +127,6 @@ $('#btn-continuar3').on('click', function(){
                                                                     $('.content-page8').show('slow', function(){
                                                                         actions = false
                                                                         step = 10
-                                                                        /*funcion temporal para cambiar de pantalla*/
                                                                         if(step === 10){
                                                                             actions = true
                                                                             setTimeout(function(){
@@ -149,4 +157,4 @@ $('#btn-continuar3').on('click', function(){
             })
         })
     }
-})
+})*/

@@ -22,6 +22,14 @@
     <link rel="stylesheet" type="text/css" href="/css/page8.css">
     <link rel="stylesheet" type="text/css" href="/css/page9.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="/css/CalibrationTest.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/page1.js"></script>
+    <script src="./js/resize_canvas.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/webgazer.js"></script>
     <style>
         button {
             border-radius: 4px;
@@ -76,7 +84,32 @@
             <img src="images/ojo_cal.svg" alt="Ojo calibración" class="eye eye-cal">
             <div class="text7">Primero, convirtamos tus ojos en un pincel: persigue este ojo con tu mirada y cada que se detenga haz clic en él para que se mueva y te permita continuar</div>
             <div class="page-btn3">
-                <img src="images/btn2.svg" alt="Continuar" class="img" id="btn-continuar3">
+                <button onclick="webgazer.begin()">
+                    <img src="images/btn2.svg" alt="Continuar" class="img" id="btn-continuar3">
+                </button>
+            </div>
+        </div>
+        <!--CalibrationTest-->
+        <div class="calibrationTest hide">
+            <a onclick="Restart()" class="nav-link" id="fixed" href="#">Calibrar</a>
+            <canvas id="plotting_canvas" width="500" height="500" style="cursor:crosshair;"></canvas>
+            <script src="/js/jquery.min.js"></script>
+            <script src="/js/sweetalert.min.js"></script>
+            <script src="/js/main.js"></script>
+            <script src="/js/calibration.js"></script>
+            <script src="/js/precision_calculation.js"></script>
+            <script src="/js/precision_store_points.js"></script>
+            <!-- Calibration points -->
+            <div class="calibrationDiv">
+                <input type="button" class="Calibration" id="Pt1"></input>
+                <input type="button" class="Calibration" id="Pt2"></input>
+                <input type="button" class="Calibration" id="Pt3"></input>
+                <input type="button" class="Calibration" id="Pt4"></input>
+                <input type="button" class="Calibration" id="Pt5"></input>
+                <input type="button" class="Calibration" id="Pt6"></input>
+                <input type="button" class="Calibration" id="Pt7"></input>
+                <input type="button" class="Calibration" id="Pt8"></input>
+                <input type="button" class="Calibration" id="Pt9"></input>
             </div>
         </div>
         <!--content-page4-->
@@ -148,11 +181,6 @@
             <img src="images/ojo_fin.svg" alt="Ojo final 2" class="eye eye-end2">
         </div>
     </div>
-
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/page1.js"></script>
-
 </body>
 
 </html>
