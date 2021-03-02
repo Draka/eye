@@ -1,5 +1,5 @@
 isPaint = false
-window.onload = async function () {
+async function empezar() {
     //Set up the webgazer video feedback.
     var setup = function () {
         //Set up the main canvas. The main canvas is used to calibrate the webgazer.

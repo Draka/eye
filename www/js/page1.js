@@ -80,6 +80,7 @@ $('#btn-continuar3').on('click', function(){
         $('body').addClass('calibrationTest')
         $('.content-page3').hide('slow', function(){
             $('.calibrationTest').show('slow', function(){
+                empezar()
                 actions = false
                 step = 6
             })
