@@ -15,18 +15,18 @@ function ClearCanvas() {
  */
 function PopUpInstruction() {
   ClearCanvas();
-  swal({
+  /*swal({
     title: "Calibrar",
     text: "Haga clic en cada uno de los 9 puntos de la pantalla. Debe hacer clic en cada punto 5 veces hasta que se vuelva amarillo. Esto calibrará los movimientos de los ojos.",
     buttons: {
       cancel: false,
       confirm: true
     }
-  }).then(isConfirm => {
+  }).then(isConfirm => {*/
     ShowCalibrationPoint();
-  });
-
+  /*});*/
 }
+
 /**
   * Show the help instructions right at the start.
   */
@@ -75,8 +75,10 @@ $(document).ready(function () {
       var canvas = document.getElementById("plotting_canvas");
       canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
 
+      //Change to the next screen
+      $('.calibrationTest .page-btn4').slideDown('slow')
       // notification for the measurement process
-      swal({
+      /*swal({
         title: "Calcular la medida",
         text: "No mueva el mouse y mire fijamente el punto del medio durante los próximos 5 segundos. Esto nos permitirá calcular la precisión de nuestras predicciones.",
         closeOnEsc: false,
@@ -117,7 +119,7 @@ $(document).ready(function () {
             });
           });
         });
-      });
+      });*/
     }
   });
 });

@@ -29,11 +29,11 @@ setTimeout(function(){
                         $('.content-page1 .form, .content-page1 .nombreing, .content-page1 .page-btn').slideDown('slow', function(){
                         })
                     })
-                }, 5000)
+                }, 500)
             }
         })
     })
-}, 5000)
+}, 500)
 
 $('#btn-continuar').on('click', function(){
     if (step === 3){
@@ -81,81 +81,54 @@ $('#btn-continuar3').on('click', function(){
         $('.content-page3').hide('slow', function(){
             $('.calibrationTest').show('slow', function(){
                 empezar()
-                actions = false
-                step = 6
+                setTimeout(function(){/*La calibración comienza 6 segundos después de acivar webgazer*/
+                    $('.nav-link').click()
+                    actions = false
+                    step = 6
+                }, 6000)
             })
         })
     }
 })
-/*
-$('#btn-continuar3').on('click', function(){
-    if(step === 5){
+
+$('#btn-continuar4').on('click', function(){
+    if(step === 6){
         actions = true
         $('body').addClass('page4')
-        $('.content-page3').hide('slow', function(){
-            $('.content-page4').show('slow', function(){
-                actions = false
-                step = 6
-                if(step === 6){
-                    actions = true
-                    setTimeout(function(){
-                        $('body').addClass('page5')
-                        $('.content-page4').hide('slow', function(){
-                            $('.content-page5').show('slow', function(){
-                                actions = false
-                                step = 7
-                                if(step === 7){
-                                    actions = true
-                                    setTimeout(function(){
-                                        $('body').addClass('page6')
-                                        $('.content-page5').hide('slow', function(){
-                                            $('.content-page6').show('slow', function(){
+        $('.calibrationTest .calibrationDiv').hide('slow', function(){
+            $('.calibrationTest .page-btn4').hide('slow', function(){
+                document.getElementById("plotting_canvas").style.setProperty('background-color', '#454e72')
+                document.getElementById("plotting_canvas").style.setProperty('margin', '0')
+                document.getElementById("plotting_canvas").style.setProperty('top', '0')
+                document.getElementById("plotting_canvas").style.setProperty('right', '0')
+                document.getElementById("plotting_canvas").style.setProperty('bottom', '0')
+                document.getElementById("plotting_canvas").style.setProperty('left', '0')
+                $('.content-page4').show('slow', function(){
+                    actions = false
+                    step = 7
+                    if(step === 7){
+                        actions = true
+                        setTimeout(function(){
+                            $('.content-page4').hide('slow', function(){
+                                $('.content-page5').show('slow', function(){
+                                    document.getElementById("plotting_canvas").style.setProperty('background-color', '#73c0ba')
+                                    actions = false
+                                    step = 8
+                                    if(step === 8){
+                                        setTimeout(function(){
+                                            $('.content-page5').hide('slow', function(){
+                                                document.getElementById("plotting_canvas").style.setProperty('background-color', '#ffffff')
                                                 actions = false
-                                                step = 8
-                                                if(step === 8){
-                                                    actions = true
-                                                    setTimeout(function(){
-                                                        $('body').addClass('page7')
-                                                        document.getElementById("page6id").setAttribute("style","opacity:0.5; -moz-opacity:0.5; filter:alpha(opacity=50)");
-                                                        $('.content-page7').show('slow', function(){
-                                                            actions = false
-                                                            step = 9
-                                                        if(step === 9){
-                                                            actions = true
-                                                            setTimeout(function(){
-                                                                $('body').addClass('page8')
-                                                                $('.content-page7').hide('slow', function(){
-                                                                    $('.content-page8').show('slow', function(){
-                                                                        actions = false
-                                                                        step = 10
-                                                                        if(step === 10){
-                                                                            actions = true
-                                                                            setTimeout(function(){
-                                                                                $('body').addClass('page9')
-                                                                                $('.content-page8').hide('slow', function(){
-                                                                                    $('.content-page9').show('slow', function(){
-                                                                                        actions = false
-                                                                                        step = 11
-                                                                                    })
-                                                                                })
-                                                                            }, 7000)
-                                                                        }
-                                                                    })
-                                                                })
-                                                            }, 7000)
-                                                        }
-                                                        })
-                                                    }, 7000)
-                                                }
+                                                step = 9
                                             })
-                                        })
-                                    }, 7000)
-                                }
+                                        }, 500)
+                                    }
+                                })
                             })
-                        })
-                    }, 7000)
-                }
+                        }, 2000)
+                    }
+                })
             })
         })
     }
-})*/
+})

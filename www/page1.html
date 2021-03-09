@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="/css/page9.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" href="/css/CalibrationTest.css">
+    <link rel="stylesheet" type="text/css" href="/css/CalibrationTest.css">
     <style>
         button {
             border-radius: 4px;
@@ -82,15 +82,9 @@
             </div>
         </div>
         <!--CalibrationTest-->
-        <div class="calibrationTest hide">
-            <a onclick="Restart()" class="nav-link" id="fixed" href="#">Calibrar</a>
+        <div class="calibrationTest hide" id="general">
+            <a onclick="Restart()" class="nav-link hide" href="#">Calibrar</a>
             <canvas id="plotting_canvas" width="500" height="500" style="cursor:crosshair;"></canvas>
-            <script src="/js/jquery.min.js"></script>
-            <script src="/js/sweetalert.min.js"></script>
-            <script src="/js/main.js"></script>
-            <script src="/js/calibration.js"></script>
-            <script src="/js/precision_calculation.js"></script>
-            <script src="/js/precision_store_points.js"></script>
             <!-- Calibration points -->
             <div class="calibrationDiv">
                 <input type="button" class="Calibration" id="Pt1"></input>
@@ -102,6 +96,9 @@
                 <input type="button" class="Calibration" id="Pt7"></input>
                 <input type="button" class="Calibration" id="Pt8"></input>
                 <input type="button" class="Calibration" id="Pt9"></input>
+                <div class="page-btn4 hide">
+                    <img src="images/btn2.svg" alt="Continuar" class="img" id="btn-continuar4">
+                </div>
             </div>
         </div>
         <!--content-page4-->
@@ -136,9 +133,6 @@
         </div>
         <!--content-page6-->
         <div class="content-page6 hide" id="page6id">
-            <div class="canvas">
-                <canvas id="eye-canvas"></canvas>
-            </div>
             <img src="images/ojo_canvas.svg" alt="Ojo canvas" class="eye eye-canvas">
         </div>
         <!--content-page7-->
@@ -179,6 +173,12 @@
     <script src="./js/resize_canvas.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/webgazer.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/sweetalert.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/calibration.js"></script>
+    <script src="/js/precision_calculation.js"></script>
+    <script src="/js/precision_store_points.js"></script>
 </body>
 
 </html>

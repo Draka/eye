@@ -10,12 +10,23 @@ html, body {
     position: relative;
     height: 100%;
 }
-#fixed{
-    z-index: 0;
-}
-
 .calibrationTest{
-    background-color: #ffffff;
+    background-color: #8c3c64;
     cursor: pointer;
     transition: all 0.3s ease-in;
+}
+
+.calibrationTest .page-btn4{
+    height: 4em;
+    bottom: 42px;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    top: 555px;
+    position: fixed;
+}
+
+.calibrationTest .page-btn4 img{
+    height: 100%;
+    cursor: pointer;
 }
