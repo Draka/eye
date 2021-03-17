@@ -1,4 +1,6 @@
 isPaint = false
+posx = null
+posy = null
 async function empezar() {
     //Set up the webgazer video feedback.
     var setup = function () {
@@ -19,7 +21,7 @@ async function empezar() {
     ctx.beginPath();
     ctx.moveTo(window.innerWidth / 2, window.innerHeight / 2);
 
-    isPaint = false
+    isPaint = true
     webgazer.params.showVideoPreview = true;
     // webgazer.params.storingPoints = true;
     //start the webgazer tracker
@@ -31,6 +33,11 @@ async function empezar() {
             if (isPaint && data) {
                 // ctx.lineTo(data.x, data.y);
                 // ctx.stroke();
+                posx = data.x
+                posy = data.y
+            }
+            if (isPaint && pincel && data) {
+                pincel.pos(data.x,data.y)
             }
         }).begin();
     webgazer.showVideoPreview(true) /* shows all video previews */
