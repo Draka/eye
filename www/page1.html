@@ -12,6 +12,7 @@
     <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
     <TITLE>Museo</TITLE>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="/css/page1.css">
     <link rel="stylesheet" type="text/css" href="/css/page2.css">
     <link rel="stylesheet" type="text/css" href="/css/page3.css">
@@ -25,8 +26,31 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/CalibrationTest.css">
     <style>
+        ::-webkit-scrollbar {
+            width: 0;  /* Remove scrollbar space */
+            background: transparent;  /* Optional: just make scrollbar invisible */
+        }
         button {
             border-radius: 4px;
+        }
+        .fullscreen{
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            overflow: auto;
+            z-index: 1;
+        }
+        .transparent{
+            position: fixed;
+            pointer-events: none;
+            left: 0;
+            right: 0;
+            width: 2000px;
+            height: 2000px;
+            overflow: auto;
+            z-index: 3;
         }
     </style>
 </head>
@@ -37,46 +61,32 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="container relative">
-        <div class="content-page1" id="page1id">
-            <div class="text">
-                <img src="images/text1.svg" alt="Con la cara tapada es dificil expresarse" class="text1">
-                <img src="images/text2.svg" alt="pero tus ojos pueden hacerlo libremente" class="text2 hide">
-                <img src="images/text3.svg" alt="¿quieres pintar con ellos? sigue las instrucciones y disfruta" class="text3 hide">
-            </div>
-            <img src="images/ojo1.svg" alt="Ojo izquierdo" class="eye eye-i">
-            <img src="images/ojo1.svg" alt="Ojo derecho" class="eye eye-d">
-            <div class="text4">
-                <img src="images/nombre.svg" alt="Ingresa nombre" class="nombreing hide">
-            </div>
+        <!--content-page1-->
+        <div class="content-page1">
+            <div id="1_ingreso" class="fullscreen"></div>
             <div class="form hide">
                 <input type="text" id="name" class="input">
             </div>
             <div class="page-btn hide">
                 <img src="images/btn1.svg" alt="Continuar" class="img" id="btn-continuar">
             </div>
+            <div  class="transparent">
+                <img src="images/Ruido.png">
+            </div>
         </div>
         <!--content-page2-->
         <div class="content-page2 hide">
-            <img src="images/Ojo_cond.svg" alt="Ojo condiciones" class="eye eye-cond">
-            <div class="text5">Recuerda permitir el acceso a la cámara, tener buena luz y mantener la cabeza quieta en todo momento</div>
+            <div id="2_terminos" class="fullscreen"></div>
             <div class="form">
                 <input type="checkbox" id="terms" class="check">
             </div>
-            <div class="fig">
-                <span class="dot hide"></span>
-            </div>
-            <div class="text6">Aceptar términos y condiciones</div>
             <div class="page-btn2">
                 <img src="images/btn2.svg" alt="Continuar" class="img" id="btn-continuar2">
             </div>
         </div>
         <!--content-page3-->
         <div class="content-page3 hide">
-            <div class="fig">
-                <span class="dot"></span>
-            </div>
-            <img src="images/ojo_cal.svg" alt="Ojo calibración" class="eye eye-cal">
-            <div class="text7">Primero, convirtamos tus ojos en un pincel: persigue este ojo con tu mirada y cada que se detenga haz clic en él para que se mueva y te permita continuar</div>
+            <div id="3_instrucciones" class="fullscreen"></div>
             <div class="page-btn3">
                 <img src="images/btn2.svg" alt="Continuar" class="img" id="btn-continuar3">
             </div>
@@ -167,6 +177,7 @@
             <img src="images/ojo_fin.svg" alt="Ojo final 2" class="eye eye-end2">
         </div>
     </div>
+    <script src="lottie.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/page1.js"></script>

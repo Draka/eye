@@ -11,26 +11,61 @@ html, body {
     height: 100%;
 }
 .page2{
-    background-color: #90433d;
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
-@font-face{
-    font-family: myfont;
-    src: url(../fonts/Quicksand-VariableFont_wght.ttf);
-}
 
 /* content-page2 */
-.content-page2 .eye-cond,
-.content-page2 .text5,
+.content-page2 .form,
 .content-page2 .check,
-.content-page2 .fig,
-.content-page2 .dot,
-.content-page2 .text6,
 .content-page2 .page-btn2{
     position: absolute;
     transition: all 0.3s ease-in;
 }
+
+/* Contenido */
+.content-page2 .form {
+    width: 17px;
+    height: 17px;
+    margin: auto; 
+    right: 0;
+    bottom: 245px;
+    left: 0;
+    z-index: 2;
+}
+.content-page2 .check {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+    cursor: pointer;
+}
+.content-page2 .check:hover{
+    background-color: rgb(241, 166, 166);
+}
+.content-page2 .check:checked {
+    background-color: rgb(119, 196, 95);
+}
+.content-page2 .page-btn2{
+    width: 130px;
+    height: 65px;
+    margin: auto;
+    right: 0;
+    bottom: 25px;
+    left: 0;
+    text-align: center;
+    z-index: 3;
+}
+.content-page2 .page-btn2 img{
+    height: 100%;
+    cursor: pointer;
+}
+
+/* content-page2 *//*
+
 
 .content-page2 .eye-cond{
     max-height: 900px;
@@ -56,12 +91,7 @@ html, body {
     outline: none;
     cursor: pointer;
 }
-.content-page2 .check:hover{
-    background-color: rgb(241, 166, 166);
-}
-.content-page2 .check:checked {
-    background-color: rgb(172, 67, 67);
-}
+
 
 .content-page2 .fig{
     margin: auto;

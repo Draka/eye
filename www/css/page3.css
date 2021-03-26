@@ -11,65 +11,17 @@ html, body {
     height: 100%;
 }
 .page3{
-    background-color: #8c3c64;
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
-@font-face{
-    font-family: myfont;
-    src: url(../fonts/Quicksand-VariableFont_wght.ttf);
-}
 
 /* content-page3 */
-
-.content-page3 .fig,
-.content-page3 .dot,
-.content-page3 .eye-cal,
-.content-page3 .text7,
 .content-page3 .page-btn3{
     position: absolute;
     transition: all 0.3s ease-in;
 }
 
-.content-page3 .fig{
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.content-page3 .dot {
-    background-color: #1c1414;
-    border-radius: 50%;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.content-page3 .eye-cal {
-    max-height: 57px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-}
-
-.content-page3 .text7 {
-    position: absolute;
-    color:white;
-    text-align: center;
-    font-family: myFont;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
+/* Contenido */
 .content-page3 .page-btn3 {
     height: 4em;
     bottom: 42px;
@@ -81,7 +33,7 @@ html, body {
     height: 100%;
     cursor: pointer;
 }
-
+/*
 @media (min-width: 576px){
     .content-page3 .fig{
         height: 350px;

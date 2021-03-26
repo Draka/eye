@@ -1,20 +1,85 @@
-function parpadeo() {
-    var ojos = $('.content-page1 .eye')
-    ojos.attr('src', 'images/ojo1_p.svg')
-    setTimeout(function () {
-        ojos.attr('src', 'images/ojo1.svg')
-    }, 600)
-    setTimeout(function () {
-        parpadeo()
-    }, Math.random() * 7000 + 3000)
-}
-
-parpadeo()
 var step = 1
 var actions = false
-var pintando = false
-var pincel = null
 
+//Reproducción de la animación de ingreso
+lottie.loadAnimation({
+    container: document.getElementById('1_ingreso'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    path: '1_ingreso.json'
+})
+
+//Muestra el campo de texto y el botón de continuar
+setTimeout(function() {
+    actions = true
+    $('.content-page1 .form').show(function(){
+        $('.content-page1 .page-btn').slideDown('slow', function(){
+            actions = false
+            step = 2
+        })
+    })
+}, 12000)
+
+//Oculta la primera animación y muestra la segunda al pulsar el botón de continuar
+$('#btn-continuar').on('click', function(){
+    if(step === 2){
+        if (!$('#name').val()) return;
+        actions = true
+        $('.content-page1 .form').slideUp('slow')
+        $('.content-page1 .page-btn').slideUp('slow')
+        $('body').addClass('page2')
+        $('.page-btn2').hide()
+        $('.check').hide()
+        $('.content-page2').show('slow', function(){
+            //Reproducción de la animación de términos y condiciones
+            lottie.loadAnimation({
+                container: document.getElementById('2_terminos'),
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: '2_terminos.json'
+            })
+            setTimeout(function(){
+                $('.check').slideDown('slow')
+            }, 1200)
+            //Evaluación del estado del check
+            $('#terms').on('change', function () {
+                if (this.checked) {
+                    $('.content-page2 .page-btn2').slideDown('slow', function () {
+                        actions = false
+                        step = 3
+                    })
+                } else {
+                    $('.content-page2 .page-btn2').slideUp('fast')
+                }
+            })
+        })
+    }
+})
+
+$('#btn-continuar2').on('click', function(){
+    if(step === 3){
+        actions = true
+        $('body').addClass('page3')
+        $('.content-page1').hide('slow')
+        $('.content-page2').hide('slow', function(){
+            $('.content-page3').show('slow', function(){
+                lottie.loadAnimation({
+                    container: document.getElementById('3_instrucciones'),
+                    renderer: 'svg',
+                    loop: false,
+                    autoplay: true,
+                    path: '3_instrucciones.json'
+                })
+                actions = false
+                step = 4
+            })
+        })
+    }
+})
+
+/*
 setTimeout(function () {
     $('.content-page1 .text1').hide('slow', function () {
         $('.content-page1 .text2').show('slow', function () {
@@ -82,7 +147,7 @@ $('#btn-continuar3').on('click', function () {
         $('.content-page3').hide('slow', function () {
             $('.calibrationTest').show('slow', function () {
                 empezar()
-                setTimeout(function () {/*La calibración comienza 6 segundos después de acivar webgazer*/
+                setTimeout(function () {//La calibración comienza 6 segundos después de acivar webgazer
                     $('.nav-link').trigger('click')
                     actions = false
                     step = 6
@@ -298,4 +363,4 @@ var pincel15 = {
         }
     }
 }
-
+*/
