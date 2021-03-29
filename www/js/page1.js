@@ -1,3 +1,5 @@
+var pintando = false
+var pincel = null
 var step = 1
 var actions = false
 
@@ -63,7 +65,8 @@ $('#btn-continuar2').on('click', function(){
         actions = true
         $('body').addClass('page3')
         $('.content-page1').hide('slow')
-        $('.content-page2').hide('slow', function(){
+        $('.content-page2').hide('slow')
+        $('.content-page3 .page-btn3').hide('slow', function(){
             $('.content-page3').show('slow', function(){
                 lottie.loadAnimation({
                     container: document.getElementById('3_instrucciones'),
@@ -72,6 +75,9 @@ $('#btn-continuar2').on('click', function(){
                     autoplay: true,
                     path: '3_instrucciones.json'
                 })
+                setTimeout(function(){
+                    $('.content-page3 .page-btn3').slideDown('slow')
+                }, 8000)
                 actions = false
                 step = 4
             })
@@ -79,69 +85,8 @@ $('#btn-continuar2').on('click', function(){
     }
 })
 
-/*
-setTimeout(function () {
-    $('.content-page1 .text1').hide('slow', function () {
-        $('.content-page1 .text2').show('slow', function () {
-            actions = false
-            step = 2
-            if (step === 2) {
-                setTimeout(function () {
-                    $('.content-page1 .text2').hide('slow', function () {
-                        $('.content-page1 .text3').show('slow', function () {
-                            actions = false
-                            step = 3
-                        })
-                        $('.content-page1 .form, .content-page1 .nombreing, .content-page1 .page-btn').slideDown('slow', function () {
-                        })
-                    })
-                }, 500)
-            }
-        })
-    })
-}, 500)
-
-$('#btn-continuar').on('click', function () {
-    if (step === 3) {
-        if (!$('#name').val()) return;
-
-        actions = true
-        $('body').addClass('page2')
-        document.getElementById("page1id").setAttribute("style", "opacity:0.5; -moz-opacity:0.5; filter:alpha(opacity=50)");
-        $('.content-page2 .page-btn2').hide()
-        $('.content-page2').show('slow', function () {
-            $('#terms').on('change', function () {
-                if (this.checked) {
-                    $('.content-page2 .page-btn2').slideDown('slow', function () {
-                        actions = false
-                        step = 4
-                    })
-                    $('.content-page2 .dot').show()
-                } else {
-                    $('.content-page2 .page-btn2').slideToggle('fast')
-                    $('.content-page2 .dot').hide()
-                }
-            })
-        })
-    }
-})
-
-$('#btn-continuar2').on('click', function () {
-    if (step === 4) {
-        actions = true;
-        $('body').addClass('page3')
-        $('.content-page1').hide('slow')
-        $('.content-page2').hide('slow', function () {
-            $('.content-page3').show('slow', function () {
-                actions = false
-                step = 5
-            })
-        })
-    }
-})
-
 $('#btn-continuar3').on('click', function () {
-    if (step === 5) {
+    if (step === 4) {
         actions = true
         $('body').addClass('calibrationTest')
         $('.content-page3').hide('slow', function () {
@@ -150,7 +95,7 @@ $('#btn-continuar3').on('click', function () {
                 setTimeout(function () {//La calibración comienza 6 segundos después de acivar webgazer
                     $('.nav-link').trigger('click')
                     actions = false
-                    step = 6
+                    step = 5
                 }, 6000)
             })
         })
@@ -158,7 +103,7 @@ $('#btn-continuar3').on('click', function () {
 })
 
 $('#btn-continuar4').on('click', function () {
-    if (step === 6) {
+    if (step === 5) {
         actions = true
         $('body').addClass('page4')
         $('.calibrationTest .calibrationDiv').hide('slow', function () {
@@ -171,21 +116,21 @@ $('#btn-continuar4').on('click', function () {
                 document.getElementById("plotting_canvas").style.setProperty('left', '0')
                 $('.content-page4').show('slow', function () {
                     actions = false
-                    step = 7
-                    if (step === 7) {
+                    step = 6
+                    if (step === 6) {
                         actions = true
                         setTimeout(function () {
                             $('.content-page4').hide('slow', function () {
                                 $('.content-page5').show('slow', function () {
                                     document.getElementById("plotting_canvas").style.setProperty('background-color', '#73c0ba')
                                     actions = false
-                                    step = 8
-                                    if (step === 8) {
+                                    step = 7
+                                    if (step === 7) {
                                         setTimeout(function () {
                                             $('.content-page5').hide('slow', function () {
                                                 document.getElementById("plotting_canvas").style.setProperty('background-color', '#ffffff')
                                                 actions = false
-                                                step = 9
+                                                step = 8
                                                 // Logica de pincel aca, cuando seleccione ponga la función
                                                 pincel = pincel11
                                                 pincel.init()
@@ -363,4 +308,69 @@ var pincel15 = {
         }
     }
 }
+
+/*
+setTimeout(function () {
+    $('.content-page1 .text1').hide('slow', function () {
+        $('.content-page1 .text2').show('slow', function () {
+            actions = false
+            step = 2
+            if (step === 2) {
+                setTimeout(function () {
+                    $('.content-page1 .text2').hide('slow', function () {
+                        $('.content-page1 .text3').show('slow', function () {
+                            actions = false
+                            step = 3
+                        })
+                        $('.content-page1 .form, .content-page1 .nombreing, .content-page1 .page-btn').slideDown('slow', function () {
+                        })
+                    })
+                }, 500)
+            }
+        })
+    })
+}, 500)
+
+$('#btn-continuar').on('click', function () {
+    if (step === 3) {
+        if (!$('#name').val()) return;
+
+        actions = true
+        $('body').addClass('page2')
+        document.getElementById("page1id").setAttribute("style", "opacity:0.5; -moz-opacity:0.5; filter:alpha(opacity=50)");
+        $('.content-page2 .page-btn2').hide()
+        $('.content-page2').show('slow', function () {
+            $('#terms').on('change', function () {
+                if (this.checked) {
+                    $('.content-page2 .page-btn2').slideDown('slow', function () {
+                        actions = false
+                        step = 4
+                    })
+                    $('.content-page2 .dot').show()
+                } else {
+                    $('.content-page2 .page-btn2').slideToggle('fast')
+                    $('.content-page2 .dot').hide()
+                }
+            })
+        })
+    }
+})
+
+$('#btn-continuar2').on('click', function () {
+    if (step === 4) {
+        actions = true;
+        $('body').addClass('page3')
+        $('.content-page1').hide('slow')
+        $('.content-page2').hide('slow', function () {
+            $('.content-page3').show('slow', function () {
+                actions = false
+                step = 5
+            })
+        })
+    }
+})
+
+
+
+
 */
