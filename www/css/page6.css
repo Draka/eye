@@ -11,30 +11,24 @@ html, body {
     height: 100%;
 }
 .page6{
-    background-color: white;
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
 
-.content-page6 .canvas,
-.content-page6 .eye-canvas{
+.content-page6 .page-btn5{
     position: absolute;
     transition: all 0.3s ease-in;
-}
-
-.content-page6 .canvas{
-    height: 580px;
-    width: 1000px;
-    border: black 1px solid;
+    width: 130px;
+    height: 65px;
     margin: auto;
-    left: 0;
     right: 0;
-    top: 0;
-    bottom: 0;
+    bottom: 70px;
+    left: 0;
+    text-align: center;
+    z-index: 3;
 }
 
-.content-page6 .eye-canvas{
-    height: 80px;
-    top: 0px;
-    right: -50px;
+.content-page6 .page-btn5 img{
+    height: 100%;
+    cursor: pointer;
 }
