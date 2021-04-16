@@ -30,3 +30,12 @@ html, body {
     height: 100%;
     cursor: pointer;
 }
+
+.calibrationTest .ojo_calibrar{
+    position: fixed;
+    height: 60px;
+    width: 100px;
+    margin:2px;
+    top: 51px;
+    left: -15px;
+}

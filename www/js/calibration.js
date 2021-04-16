@@ -55,6 +55,15 @@ $(document).ready(function () {
       $(this).css('background-color', 'yellow');
       $(this).prop('disabled', true); //disables the button
       PointCalibrate++;
+      switch(PointCalibrate){
+        case 1:
+          anime({
+            targets: 'div.ojo_calibrar',
+            translateX: [
+              {value: 700, duration: 2500}
+            ]
+          })
+      }
     } else if (CalibrationPoints[id] < 5) {
       //Gradually increase the opacity of calibration points when click to give some indication to user.
       var opacity = 0.2 * CalibrationPoints[id] + 0.2;
