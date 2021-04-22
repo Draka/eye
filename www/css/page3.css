@@ -11,6 +11,7 @@ html, body {
     height: 100%;
 }
 .page3{
+    background-color: #8c3c64;
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
@@ -23,11 +24,13 @@ html, body {
 
 /* Contenido */
 .content-page3 .page-btn3 {
-    height: 4em;
-    bottom: 42px;
-    text-align: center;
-    width: 100%;
+    width: 130px;
+    height: 65px;
+    margin: auto;
+    right: 20px;
+    bottom: 55px;
     left: 0;
+    text-align: center;
     z-index: 3;
 }
 .content-page3 .page-btn3 img{

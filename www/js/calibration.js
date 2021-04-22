@@ -55,15 +55,6 @@ $(document).ready(function () {
       $(this).css('background-color', 'yellow');
       $(this).prop('disabled', true); //disables the button
       PointCalibrate++;
-      switch(PointCalibrate){
-        case 1:
-          anime({
-            targets: 'div.ojo_calibrar',
-            translateX: [
-              {value: 700, duration: 2500}
-            ]
-          })
-      }
     } else if (CalibrationPoints[id] < 5) {
       //Gradually increase the opacity of calibration points when click to give some indication to user.
       var opacity = 0.2 * CalibrationPoints[id] + 0.2;
@@ -86,51 +77,118 @@ $(document).ready(function () {
 
       //Change to the next screen
       $('.calibrationTest .page-btn4').slideDown('slow')
-      // notification for the measurement process
-      /*swal({
-        title: "Calcular la medida",
-        text: "No mueva el mouse y mire fijamente el punto del medio durante los próximos 5 segundos. Esto nos permitirá calcular la precisión de nuestras predicciones.",
-        closeOnEsc: false,
-        allowOutsideClick: false,
-        closeModal: true
-      }).then(isConfirm => {
-
-        // makes the variables true for 5 seconds & plots the points
-        $(document).ready(function () {
-
-          store_points_variable(); // start storing the prediction points
-
-          sleep(5000).then(() => {
-            stop_storing_points_variable(); // stop storing the prediction points
-            var past50 = webgazer.getStoredPoints(); // retrieve the stored points
-            var precision_measurement = calculatePrecision(past50);
-            var accuracyLabel = "<a>Exactitud | " + precision_measurement + "%</a>";
-            document.getElementById("Accuracy").innerHTML = accuracyLabel; // Show the accuracy in the nav bar.
-            swal({
-              title: "Tu medida de precisión es: " + precision_measurement + "%",
-              allowOutsideClick: false,
-              buttons: {
-                cancel: "Recalibrar",
-                confirm: true,
-              }
-            }).then(isConfirm => {
-              if (isConfirm) {
-                //clear the calibration & hide the last middle button
-                ClearCanvas();
-              } else {
-                //use restart function to restart the calibration
-                $("Accuracy").html('Sin calibrar');
-                webgazer.clearData();
-                ClearCalibration();
-                ClearCanvas();
-                ShowCalibrationPoint();
-              }
-            });
-          });
-        });
-      });*/
     }
   });
+  let clickCount = 0
+  $('#Pt1').on('click', function(){
+    clickCount++
+    if(clickCount === 5){
+      anime({
+        targets: 'div.ojo_calibrar',
+        translateX: [
+          {value: 655, duration: 3000}
+        ]
+      })
+      clickCount = 0
+    }
+  })
+  $('#Pt2').on('click', function(){
+    clickCount++
+    if(clickCount === 5){
+      anime({
+        targets: 'div.ojo_calibrar',
+        translateX: [
+          {value: 1292, duration: 3000}
+        ]
+      })
+      clickCount = 0
+    }
+  })
+  $('#Pt3').on('click', function(){
+    clickCount++
+    if(clickCount === 5){
+      anime({
+        targets: 'div.ojo_calibrar',
+        translateY: [
+          {value: 257, duration: 3000}
+        ]
+      })
+      clickCount = 0
+    }
+  })
+  $('#Pt6').on('click', function(){
+    clickCount++
+    if(clickCount === 5){
+      anime({
+        targets: 'div.ojo_calibrar',
+        translateY: [
+          {value: 537 , duration: 3000}
+        ]
+      })
+      clickCount = 0
+    }
+  })
+  $('#Pt9').on('click', function(){
+    clickCount++
+    if(clickCount === 5){
+      anime({
+        targets: 'div.ojo_calibrar',
+        translateX: [
+          {value: 655 , duration: 3000}
+        ]
+      })
+      clickCount = 0
+    }
+  })
+  $('#Pt8').on('click', function(){
+    clickCount++
+    if(clickCount === 5){
+      anime({
+        targets: 'div.ojo_calibrar',
+        translateX: [
+          {value: 0 , duration: 3000}
+        ]
+      })
+      clickCount = 0
+    }
+  })
+  $('#Pt7').on('click', function(){
+    clickCount++
+    if(clickCount === 5){
+      anime({
+        targets: 'div.ojo_calibrar',
+        translateY: [
+          {value: 257 , duration: 3000}
+        ]
+      })
+      clickCount = 0
+    }
+  })
+  $('#Pt4').on('click', function(){
+    clickCount++
+    if(clickCount === 5){
+      anime({
+        targets: 'div.ojo_calibrar',
+        translateX: [
+          {value: 655 , duration: 3000}
+        ]
+      })
+      clickCount = 0
+    }
+  })
+  $('#Pt5').on('click', function(){
+    clickCount++
+    if(clickCount === 5){
+      anime({
+        targets: 'div.ojo_calibrar',
+        rotate: {
+          value: 720,
+          duration: 3000
+        },
+        scale: 5
+      })
+    }
+  })
 });
 
 /**

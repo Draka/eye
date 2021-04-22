@@ -11,6 +11,7 @@ html, body {
     height: 100%;
 }
 .page1{
+    background-color: #ff5454;
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
@@ -28,8 +29,8 @@ html, body {
     width: 355px;
     height: 45px;
     margin: auto;
-    right: 0;
-    bottom: 130px;
+    right: 15px;
+    bottom: 145px;
     left: 0;
     z-index: 2;
 }
@@ -49,8 +50,8 @@ html, body {
     width: 130px;
     height: 65px;
     margin: auto;
-    right: 0;
-    bottom: 70px;
+    right: 15px;
+    bottom: 80px;
     left: 0;
     text-align: center;
     z-index: 3;

@@ -72,7 +72,7 @@ $('#btn-continuar2').on('click', function(){
                 lottie.loadAnimation({
                     container: document.getElementById('3_instrucciones'),
                     renderer: 'svg',
-                    loop: true,
+                    loop: false,
                     autoplay: true,
                     path: '3_instrucciones.json'
                 })
