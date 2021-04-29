@@ -16,10 +16,19 @@ lottie.loadAnimation({
 //Muestra el campo de texto y el botón de continuar
 setTimeout(function() {
     actions = true
-    $('.content-page1 .form').show(function(){
-        $('.content-page1 .page-btn').slideDown('slow', function(){
-            actions = false
-            step = 2
+    $('.content-page1 .fullscreen').slideDown(function(){
+        lottie.loadAnimation({
+            container: document.getElementById('ojos_parpadeo'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'ojos sin fondo.json'
+        })
+        $('.content-page1 .form').show(function(){
+            $('.content-page1 .page-btn').slideDown('slow', function(){
+                actions = false
+                step = 2
+            })
         })
     })
 }, 12000)
@@ -33,6 +42,7 @@ $('#btn-continuar').on('click', function(){
         $('.content-page1 .page-btn').slideUp('slow')
         $('body').addClass('page2')
         $('.page-btn2').hide()
+        $('.ojo').hide('slow')
         $('.check').hide()
         $('.content-page2').show('slow', function(){
             //Reproducción de la animación de términos y condiciones
@@ -90,10 +100,12 @@ $('#btn-continuar3').on('click', function () {
     if (step === 4) {
         actions = true
         $('body').addClass('calibrationTest')
+        document.getElementById("general").style.setProperty('background-color', '#8c3c64')
         $('.content-page3').hide('slow', function () {
             $('.calibrationTest').show('slow', function () {
                 empezar()
                 setTimeout(function () {//La calibración comienza 6 segundos después de acivar webgazer
+                    $('.calibrationTest .ojo_calibrar').show('slow')
                     $('.nav-link').trigger('click')
                     actions = false
                     step = 5
@@ -165,29 +177,45 @@ $('.ojo_feliz').on('click', function(){
                                 actions = true
                                 setTimeout(function(){
                                     webgazer.pause()
-                                    $('.content-page6').show('slow', function(){
-                                        lottie.loadAnimation({
-                                            container: document.getElementById('6_gracias'),
-                                            renderer: 'svg',
-                                            loop: false,
-                                            autoplay: true,
-                                            path: '6_gracias.json'
-                                        })
-                                        setTimeout(function(){
-                                            const mc = document.querySelector("#plotting_canvas");
-                                            $('.page-btn5').on('click', function(){
-                                                if(window.navigator.msSaveBlob){
-                                                    window.navigator.msSaveBlob(mc.msToBlob(), "archivo.jpeg");
-                                                } else{
-                                                    const a = document.createElement("a");
-                                                    document.body.appendChild(a);
-                                                    a.href = mc.toDataURL();
-                                                    a.download = "archivo.jpeg";
-                                                    a.click();
-                                                    document.body.removeChild(a);
-                                                }
+                                    $('#plotting_canvas').hide('slow', function(){
+                                        $('body').addClass('page6')
+                                        document.getElementById("general").style.setProperty('background-color', '#f03c54')
+                                        $('.content-page6').show('slow', function(){
+                                            lottie.loadAnimation({
+                                                container: document.getElementById('6_descargar'),
+                                                renderer: 'svg',
+                                                loop: false,
+                                                autoplay: true,
+                                                path: '6_descargar.json'
                                             })
-                                        }, 7000)
+                                            setTimeout(function(){
+                                                const mc = document.querySelector("#plotting_canvas");
+                                                $('.page-btn5').on('click', function(){
+                                                    if(window.navigator.msSaveBlob){
+                                                        window.navigator.msSaveBlob(mc.msToBlob(), "archivo.jpeg");
+                                                    } else{
+                                                        const a = document.createElement("a");
+                                                        document.body.appendChild(a);
+                                                        a.href = mc.toDataURL();
+                                                        a.download = "archivo.jpeg";
+                                                        a.click();
+                                                        document.body.removeChild(a);
+                                                    }
+                                                    $('body').addClass('page7')
+                                                    $('.content-page6').hide('slow', function(){
+                                                        $('.content-page7').show('slow', function(){
+                                                            lottie.loadAnimation({
+                                                                container: document.getElementById('7_gracias'),
+                                                                renderer: 'svg',
+                                                                loop: false,
+                                                                autoplay: true,
+                                                                path: '7_gracias.json'
+                                                            })
+                                                        })
+                                                    })
+                                                })
+                                            }, 7000)
+                                        })
                                     })
                                 }, 30000)
                             }
@@ -230,29 +258,45 @@ $('.ojo_aburrido').on('click', function(){
                                 actions = true
                                 setTimeout(function(){
                                     webgazer.pause()
-                                    $('.content-page6').show('slow', function(){
-                                        lottie.loadAnimation({
-                                            container: document.getElementById('6_gracias'),
-                                            renderer: 'svg',
-                                            loop: false,
-                                            autoplay: true,
-                                            path: '6_gracias.json'
-                                        })
-                                        setTimeout(function(){
-                                            const mc = document.querySelector("#plotting_canvas");
-                                            $('.page-btn5').on('click', function(){
-                                                if(window.navigator.msSaveBlob){
-                                                    window.navigator.msSaveBlob(mc.msToBlob(), "archivo.jpeg");
-                                                } else{
-                                                    const a = document.createElement("a");
-                                                    document.body.appendChild(a);
-                                                    a.href = mc.toDataURL();
-                                                    a.download = "archivo.jpeg";
-                                                    a.click();
-                                                    document.body.removeChild(a);
-                                                }
+                                    $('#plotting_canvas').hide('slow', function(){
+                                        $('body').addClass('page6')
+                                        document.getElementById("general").style.setProperty('background-color', '#f03c54')
+                                        $('.content-page6').show('slow', function(){
+                                            lottie.loadAnimation({
+                                                container: document.getElementById('6_descargar'),
+                                                renderer: 'svg',
+                                                loop: false,
+                                                autoplay: true,
+                                                path: '6_descargar.json'
                                             })
-                                        }, 7000)
+                                            setTimeout(function(){
+                                                const mc = document.querySelector("#plotting_canvas");
+                                                $('.page-btn5').on('click', function(){
+                                                    if(window.navigator.msSaveBlob){
+                                                        window.navigator.msSaveBlob(mc.msToBlob(), "archivo.jpeg");
+                                                    } else{
+                                                        const a = document.createElement("a");
+                                                        document.body.appendChild(a);
+                                                        a.href = mc.toDataURL();
+                                                        a.download = "archivo.jpeg";
+                                                        a.click();
+                                                        document.body.removeChild(a);
+                                                    }
+                                                    $('body').addClass('page7')
+                                                    $('.content-page6').hide('slow', function(){
+                                                        $('.content-page7').show('slow', function(){
+                                                            lottie.loadAnimation({
+                                                                container: document.getElementById('7_gracias'),
+                                                                renderer: 'svg',
+                                                                loop: false,
+                                                                autoplay: true,
+                                                                path: '7_gracias.json'
+                                                            })
+                                                        })
+                                                    })
+                                                })
+                                            }, 7000)
+                                        })
                                     })
                                 }, 30000)
                             }
@@ -297,29 +341,45 @@ $('.ojo_enojado').on('click', function(){
                                 actions = true
                                 setTimeout(function(){
                                     webgazer.pause()
-                                    $('.content-page6').show('slow', function(){
-                                        lottie.loadAnimation({
-                                            container: document.getElementById('6_gracias'),
-                                            renderer: 'svg',
-                                            loop: false,
-                                            autoplay: true,
-                                            path: '6_gracias.json'
-                                        })
-                                        setTimeout(function(){
-                                            const mc = document.querySelector("#plotting_canvas");
-                                            $('.page-btn5').on('click', function(){
-                                                if(window.navigator.msSaveBlob){
-                                                    window.navigator.msSaveBlob(mc.msToBlob(), "archivo.jpeg");
-                                                } else{
-                                                    const a = document.createElement("a");
-                                                    document.body.appendChild(a);
-                                                    a.href = mc.toDataURL();
-                                                    a.download = "archivo.jpeg";
-                                                    a.click();
-                                                    document.body.removeChild(a);
-                                                }
+                                    $('#plotting_canvas').hide('slow', function(){
+                                        $('body').addClass('page6')
+                                        document.getElementById("general").style.setProperty('background-color', '#f03c54')
+                                        $('.content-page6').show('slow', function(){
+                                            lottie.loadAnimation({
+                                                container: document.getElementById('6_descargar'),
+                                                renderer: 'svg',
+                                                loop: false,
+                                                autoplay: true,
+                                                path: '6_descargar.json'
                                             })
-                                        }, 7000)
+                                            setTimeout(function(){
+                                                const mc = document.querySelector("#plotting_canvas");
+                                                $('.page-btn5').on('click', function(){
+                                                    if(window.navigator.msSaveBlob){
+                                                        window.navigator.msSaveBlob(mc.msToBlob(), "archivo.jpeg");
+                                                    } else{
+                                                        const a = document.createElement("a");
+                                                        document.body.appendChild(a);
+                                                        a.href = mc.toDataURL();
+                                                        a.download = "archivo.jpeg";
+                                                        a.click();
+                                                        document.body.removeChild(a);
+                                                    }
+                                                    $('body').addClass('page7')
+                                                    $('.content-page6').hide('slow', function(){
+                                                        $('.content-page7').show('slow', function(){
+                                                            lottie.loadAnimation({
+                                                                container: document.getElementById('7_gracias'),
+                                                                renderer: 'svg',
+                                                                loop: false,
+                                                                autoplay: true,
+                                                                path: '7_gracias.json'
+                                                            })
+                                                        })
+                                                    })
+                                                })
+                                            }, 7000)
+                                        })
                                     })
                                 }, 30000)
                             }
@@ -364,29 +424,45 @@ $('.ojo_optimista').on('click', function(){
                                 actions = true
                                 setTimeout(function(){
                                     webgazer.pause()
-                                    $('.content-page6').show('slow', function(){
-                                        lottie.loadAnimation({
-                                            container: document.getElementById('6_gracias'),
-                                            renderer: 'svg',
-                                            loop: false,
-                                            autoplay: true,
-                                            path: '6_gracias.json'
-                                        })
-                                        setTimeout(function(){
-                                            const mc = document.querySelector("#plotting_canvas");
-                                            $('.page-btn5').on('click', function(){
-                                                if(window.navigator.msSaveBlob){
-                                                    window.navigator.msSaveBlob(mc.msToBlob(), "archivo.jpeg");
-                                                } else{
-                                                    const a = document.createElement("a");
-                                                    document.body.appendChild(a);
-                                                    a.href = mc.toDataURL();
-                                                    a.download = "archivo.jpeg";
-                                                    a.click();
-                                                    document.body.removeChild(a);
-                                                }
+                                    $('#plotting_canvas').hide('slow', function(){
+                                        $('body').addClass('page6')
+                                        document.getElementById("general").style.setProperty('background-color', '#f03c54')
+                                        $('.content-page6').show('slow', function(){
+                                            lottie.loadAnimation({
+                                                container: document.getElementById('6_descargar'),
+                                                renderer: 'svg',
+                                                loop: false,
+                                                autoplay: true,
+                                                path: '6_descargar.json'
                                             })
-                                        }, 7000)
+                                            setTimeout(function(){
+                                                const mc = document.querySelector("#plotting_canvas");
+                                                $('.page-btn5').on('click', function(){
+                                                    if(window.navigator.msSaveBlob){
+                                                        window.navigator.msSaveBlob(mc.msToBlob(), "archivo.jpeg");
+                                                    } else{
+                                                        const a = document.createElement("a");
+                                                        document.body.appendChild(a);
+                                                        a.href = mc.toDataURL();
+                                                        a.download = "archivo.jpeg";
+                                                        a.click();
+                                                        document.body.removeChild(a);
+                                                    }
+                                                    $('body').addClass('page7')
+                                                    $('.content-page6').hide('slow', function(){
+                                                        $('.content-page7').show('slow', function(){
+                                                            lottie.loadAnimation({
+                                                                container: document.getElementById('7_gracias'),
+                                                                renderer: 'svg',
+                                                                loop: false,
+                                                                autoplay: true,
+                                                                path: '7_gracias.json'
+                                                            })
+                                                        })
+                                                    })
+                                                })
+                                            }, 7000)
+                                        })
                                     })
                                 }, 30000)
                             }

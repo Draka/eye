@@ -19,6 +19,7 @@ html, body {
 /* content-page1 */
 .content-page1 .form,
 .content-page1 .nombreing,
+.content-page1 .ojo,
 .content-page1 .page-btn {
     position: absolute;
     transition: all 0.3s ease-in;
@@ -44,6 +45,21 @@ html, body {
     font-size: 25px;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.content-page1 .ojo{
+    height: auto;
+    width: 360px;
+    margin: auto;
+    top: 240px;
+    z-index: 3;
+}
+
+.content-page1 .ojo_1{
+    right: 675px;
+}
+.content-page1 .ojo_2{
+    left: 675px;
 }
 
 .content-page1 .page-btn {

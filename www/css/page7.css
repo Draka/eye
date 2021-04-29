@@ -10,18 +10,8 @@ html, body {
     position: relative;
     height: 100%;
 }
-.page6{
+.page7{
     background-color: #f03c54;
     cursor: pointer;
     transition: all 0.3s ease-in;
-}
-
-/* content-page6 */
-.content-page6 .page-btn5{
-    position: fixed;
-    height: 120px;
-    width: 120px;
-    z-index: 99999999999;
-    top: 260px;
-    left: 452px;
 }

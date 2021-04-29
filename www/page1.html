@@ -20,8 +20,6 @@
     <link rel="stylesheet" type="text/css" href="/css/page5.css">
     <link rel="stylesheet" type="text/css" href="/css/page6.css">
     <link rel="stylesheet" type="text/css" href="/css/page7.css">
-    <link rel="stylesheet" type="text/css" href="/css/page8.css">
-    <link rel="stylesheet" type="text/css" href="/css/page9.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/CalibrationTest.css">
@@ -70,9 +68,11 @@
             <div class="page-btn hide">
                 <img src="images/btn1.svg" alt="Continuar" class="img" id="btn-continuar">
             </div>
+            <div id="ojos_parpadeo" class="fullscreen hide"></div>
             <div  class="transparent">
                 <img src="images/Ruido.png">
             </div>
+
         </div>
         <!--content-page2-->
         <div class="content-page2 hide">
@@ -103,7 +103,7 @@
             <canvas id="plotting_canvas" width="500" height="500" style="cursor:crosshair;"></canvas>
             <!-- Calibration points -->
             <div class="calibrationDiv">
-                <div class="ojo_calibrar" id="ojo_animado">
+                <div class="ojo_calibrar hide" id="ojo_animado">
                     <img src="images/ojo_cal.svg">
                 </div>
                 <input type="button" class="Calibration" id="Pt1"></input>
@@ -143,10 +143,12 @@
         </div>
         <!--content-page6-->
         <div class="content-page6 hide">
-            <div id="6_gracias" class="fullscreen"></div>
-            <div class="page-btn5">
-                <img src="images/btn2.svg" alt="Continuar" class="img" id="btn-continuar4">
-            </div>
+            <div id="6_descargar" class="fullscreen"></div>
+            <div class="page-btn5"></div>
+        </div>
+        <!--content-page7-->
+        <div class="content-page7 hide">
+            <div id="7_gracias" class="fullscreen"></div>
         </div>
     </div>
     <script src="lottie.js"></script>

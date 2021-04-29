@@ -52,13 +52,9 @@ $(document).ready(function () {
     CalibrationPoints[id]++; // increments values
 
     if (CalibrationPoints[id] == 5) { //only turn to yellow after 5 clicks
-      $(this).css('background-color', 'yellow');
+      //$(this).css('background-color', 'yellow');
       $(this).prop('disabled', true); //disables the button
       PointCalibrate++;
-    } else if (CalibrationPoints[id] < 5) {
-      //Gradually increase the opacity of calibration points when click to give some indication to user.
-      var opacity = 0.2 * CalibrationPoints[id] + 0.2;
-      $(this).css('opacity', opacity);
     }
 
     //Show the middle calibration point after all other points have been clicked.
@@ -98,7 +94,7 @@ $(document).ready(function () {
       anime({
         targets: 'div.ojo_calibrar',
         translateX: [
-          {value: 1292, duration: 3000}
+          {value: 1270, duration: 3000}
         ]
       })
       clickCount = 0
@@ -110,7 +106,7 @@ $(document).ready(function () {
       anime({
         targets: 'div.ojo_calibrar',
         translateY: [
-          {value: 257, duration: 3000}
+          {value: 282, duration: 3000}
         ]
       })
       clickCount = 0
@@ -122,7 +118,7 @@ $(document).ready(function () {
       anime({
         targets: 'div.ojo_calibrar',
         translateY: [
-          {value: 537 , duration: 3000}
+          {value: 542 , duration: 3000}
         ]
       })
       clickCount = 0
@@ -158,7 +154,7 @@ $(document).ready(function () {
       anime({
         targets: 'div.ojo_calibrar',
         translateY: [
-          {value: 257 , duration: 3000}
+          {value: 282 , duration: 3000}
         ]
       })
       clickCount = 0
@@ -205,9 +201,9 @@ function ShowCalibrationPoint() {
 function ClearCalibration() {
   // Clear data from WebGazer
 
-  $(".Calibration").css('background-color', 'red');
-  $(".Calibration").css('opacity', 0.2);
-  $(".Calibration").prop('disabled', false);
+  //$(".Calibration").css('background-color', 'red');
+  //$(".Calibration").css('opacity', 0.2);
+  //$(".Calibration").prop('disabled', false);
 
   CalibrationPoints = {};
   PointCalibrate = 0;
