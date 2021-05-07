@@ -76,13 +76,15 @@ $(document).ready(function () {
     }
   });
   let clickCount = 0
+  let w = window.innerWidth
+  let h = window.innerHeight
   $('#Pt1').on('click', function(){
     clickCount++
     if(clickCount === 5){
       anime({
         targets: 'div.ojo_calibrar',
         translateX: [
-          {value: 655, duration: 3000}
+          {value: (w/2)-25, duration: 3000}
         ]
       })
       clickCount = 0
@@ -94,7 +96,7 @@ $(document).ready(function () {
       anime({
         targets: 'div.ojo_calibrar',
         translateX: [
-          {value: 1270, duration: 3000}
+          {value: w-100, duration: 3000}
         ]
       })
       clickCount = 0
@@ -106,7 +108,7 @@ $(document).ready(function () {
       anime({
         targets: 'div.ojo_calibrar',
         translateY: [
-          {value: 282, duration: 3000}
+          {value: (h/2)-48, duration: 3000}
         ]
       })
       clickCount = 0
@@ -118,7 +120,7 @@ $(document).ready(function () {
       anime({
         targets: 'div.ojo_calibrar',
         translateY: [
-          {value: 542 , duration: 3000}
+          {value: h-110 , duration: 3000}
         ]
       })
       clickCount = 0
@@ -130,7 +132,7 @@ $(document).ready(function () {
       anime({
         targets: 'div.ojo_calibrar',
         translateX: [
-          {value: 655 , duration: 3000}
+          {value: (w/2)-25 , duration: 3000}
         ]
       })
       clickCount = 0
@@ -154,7 +156,7 @@ $(document).ready(function () {
       anime({
         targets: 'div.ojo_calibrar',
         translateY: [
-          {value: 282 , duration: 3000}
+          {value: (h/2)-48 , duration: 3000}
         ]
       })
       clickCount = 0
@@ -166,7 +168,7 @@ $(document).ready(function () {
       anime({
         targets: 'div.ojo_calibrar',
         translateX: [
-          {value: 655 , duration: 3000}
+          {value: (w/2)-48 , duration: 3000}
         ]
       })
       clickCount = 0

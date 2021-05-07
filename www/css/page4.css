@@ -21,35 +21,35 @@ html, body {
 .content-page4 .ojo_enojado,
 .content-page4 .ojo_optimista{
     position: fixed;
-    height: 100px;
-    width: 150px;
+    height: 40vh;
+    width: 16vw;
     z-index: 99999999999;
 }
 
 .content-page4 .ojo_feliz{
     margin: auto;
-    top: 35px;
+    top: 10vh;
     bottom: 0;
-    right: 1030px;
+    right: 71vw;
 }
 
 .content-page4 .ojo_aburrido{
     margin: auto;
-    top: 35px;
+    top: 10vh;
     bottom: 0;
-    right: 740px;
+    right: 53vw;
 }
 
 .content-page4 .ojo_enojado{
     margin: auto;
-    top: 35px;
+    top: 10vh;
     bottom: 0;
-    left: 760px;
+    left: 53vw;
 }
 
 .content-page4 .ojo_optimista{
     margin: auto;
-    top: 35px;
+    top: 10vh;
     bottom: 0;
-    left: 1035px;
+    left: 71vw;
 }

@@ -19,9 +19,9 @@ html, body {
 /* content-page6 */
 .content-page6 .page-btn5{
     position: fixed;
-    height: 120px;
-    width: 120px;
+    height: 17vh;
+    width: 17vh;
     z-index: 99999999999;
-    top: 260px;
-    left: 452px;
+    top: 40vh;
+    left: 33vw;
 }

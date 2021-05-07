@@ -17,12 +17,13 @@ html, body {
 }
 
 .calibrationTest .page-btn4{
-    height: 4em;
-    bottom: 42px;
+    width: 10vw;
+    margin: auto;
+    bottom: 8.5vh;
+    left: 0;
+    right: 0;
     text-align: center;
-    width: 100%;
-    left: 15px;
-    top: 555px;
+    z-index: 3;
     position: fixed;
 }
 

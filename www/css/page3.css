@@ -24,12 +24,11 @@ html, body {
 
 /* Contenido */
 .content-page3 .page-btn3 {
-    width: 130px;
-    height: 65px;
+    width: 10vw;
     margin: auto;
-    right: 20px;
-    bottom: 55px;
+    bottom: 8.5vh;
     left: 0;
+    right: 0;
     text-align: center;
     z-index: 3;
 }

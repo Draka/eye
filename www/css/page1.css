@@ -27,12 +27,12 @@ html, body {
 
 /* Contenido */
 .content-page1 .form {
-    width: 355px;
-    height: 45px;
+    width: 24vw;
+    height: 7vh;
     margin: auto;
-    right: 15px;
-    bottom: 145px;
+    bottom: 21.5vh;
     left: 0;
+    right: 0;
     z-index: 2;
 }
 .content-page1 .input {
@@ -42,33 +42,17 @@ html, body {
     height: 100%;
     text-align: center;
     outline: none;
-    font-size: 25px;
+    font-size: 1.7em;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.content-page1 .ojo{
-    height: auto;
-    width: 360px;
-    margin: auto;
-    top: 240px;
-    z-index: 3;
-}
-
-.content-page1 .ojo_1{
-    right: 675px;
-}
-.content-page1 .ojo_2{
-    left: 675px;
-}
-
 .content-page1 .page-btn {
-    width: 130px;
-    height: 65px;
+    width: 10vw;
     margin: auto;
-    right: 15px;
-    bottom: 80px;
+    bottom: 11.5vh;
     left: 0;
+    right: 0;
     text-align: center;
     z-index: 3;
 }

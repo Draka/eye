@@ -51,8 +51,8 @@ li {
 
 /* Calibration button styling */
 .Calibration{
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 25px;
@@ -68,8 +68,7 @@ li {
 }
 #Pt2{
     top: 45px;
-    left: 50vw;
-    right: 25px;
+    left: 48vw;
 }
 #Pt3{
     top: 45px;
@@ -82,8 +81,7 @@ li {
 }
 #Pt5{
     top: 50vh;
-    left: 50vw;
-    right: 25px;
+    left: 48vw;
     bottom: 50px;
 }
 #Pt6{
@@ -97,8 +95,7 @@ li {
 }
 #Pt8{
     bottom:2vw;
-    left:50vw;
-    right: 25px;
+    left:48vw;
 }
 #Pt9{
     bottom:2vw;

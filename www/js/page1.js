@@ -207,7 +207,7 @@ $('.ojo_feliz').on('click', function(){
                                                             lottie.loadAnimation({
                                                                 container: document.getElementById('7_gracias'),
                                                                 renderer: 'svg',
-                                                                loop: false,
+                                                                loop: true,
                                                                 autoplay: true,
                                                                 path: '7_gracias.json'
                                                             })
@@ -217,7 +217,7 @@ $('.ojo_feliz').on('click', function(){
                                             }, 7000)
                                         })
                                     })
-                                }, 30000)
+                                }, 60000)
                             }
                         })
                     }, 9000)
@@ -288,7 +288,7 @@ $('.ojo_aburrido').on('click', function(){
                                                             lottie.loadAnimation({
                                                                 container: document.getElementById('7_gracias'),
                                                                 renderer: 'svg',
-                                                                loop: false,
+                                                                loop: true,
                                                                 autoplay: true,
                                                                 path: '7_gracias.json'
                                                             })
@@ -298,7 +298,7 @@ $('.ojo_aburrido').on('click', function(){
                                             }, 7000)
                                         })
                                     })
-                                }, 30000)
+                                }, 60000)
                             }
                         })
                     }, 9000)
@@ -371,7 +371,7 @@ $('.ojo_enojado').on('click', function(){
                                                             lottie.loadAnimation({
                                                                 container: document.getElementById('7_gracias'),
                                                                 renderer: 'svg',
-                                                                loop: false,
+                                                                loop: true,
                                                                 autoplay: true,
                                                                 path: '7_gracias.json'
                                                             })
@@ -381,7 +381,7 @@ $('.ojo_enojado').on('click', function(){
                                             }, 7000)
                                         })
                                     })
-                                }, 30000)
+                                }, 60000)
                             }
                         })
                     }, 9000)
@@ -454,7 +454,7 @@ $('.ojo_optimista').on('click', function(){
                                                             lottie.loadAnimation({
                                                                 container: document.getElementById('7_gracias'),
                                                                 renderer: 'svg',
-                                                                loop: false,
+                                                                loop: true,
                                                                 autoplay: true,
                                                                 path: '7_gracias.json'
                                                             })
@@ -464,7 +464,7 @@ $('.ojo_optimista').on('click', function(){
                                             }, 7000)
                                         })
                                     })
-                                }, 30000)
+                                }, 60000)
                             }
                         })
                     }, 9000)
