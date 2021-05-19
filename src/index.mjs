@@ -531,8 +531,8 @@ async function init(stream) {
   gazeDot = document.createElement('div');
   gazeDot.id = webgazer.params.gazeDotId;
   gazeDot.style.display = webgazer.params.showGazeDot ? 'block' : 'none';
-  gazeDot.style.position = 'fixed';
-  gazeDot.style.zIndex = 99999;
+  gazeDot.style.position = 'absolute';
+  gazeDot.style.zIndex = 1;
   gazeDot.style.left = '-5px'; //'-999em';
   gazeDot.style.top  = '-5px';
   gazeDot.style.background = 'red';
@@ -540,6 +540,7 @@ async function init(stream) {
   gazeDot.style.opacity = '0.7';
   gazeDot.style.width = '10px';
   gazeDot.style.height = '10px';
+  gazeDot.style.pointerEvents = 'none';
 
   // Add other preview/feedback elements to the screen once the video has shown and its parameters are initialized
   document.body.appendChild(videoElement);
@@ -664,6 +665,7 @@ webgazer.isReady = function() {
  * @returns {webgazer} this
  */
 webgazer.pause = function() {
+  showGazeDot: false;
   paused = true;
   return webgazer;
 };
