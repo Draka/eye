@@ -665,7 +665,7 @@ webgazer.isReady = function() {
  * @returns {webgazer} this
  */
 webgazer.pause = function() {
-  showGazeDot: false;
+  webgazer.params.showGazeDot = false;
   paused = true;
   return webgazer;
 };

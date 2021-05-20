@@ -40,3 +40,7 @@ html, body {
     top: 36px;
     left: -5px;
 }
+
+.calibrationTest .ojo_calibrar img{
+    width: 100%;
+}
