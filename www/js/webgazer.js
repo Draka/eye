@@ -86079,8 +86079,8 @@ const params = {
   faceOverlayId: 'webgazerFaceOverlay',
   faceFeedbackBoxId: 'webgazerFaceFeedbackBox',
   gazeDotId: 'webgazerGazeDot',
-  videoViewerWidth: 320,
-  videoViewerHeight: 240,
+  videoViewerWidth: 250,
+  videoViewerHeight: 170,
   faceFeedbackBoxRatio: 0.66,
   // View options
   showVideo: true,
@@ -86094,7 +86094,7 @@ const params = {
   applyKalmanFilter: true,
   // Whether or not to store accuracy eigenValues, used by the calibration example file
   storingPoints: false,
-  videoTop: 70,
+  videoTop: 130,
   videoLeft: 63,
 };
 

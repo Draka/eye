@@ -61,99 +61,39 @@ html, body {
     cursor: pointer;
 }
 
-/*
-@media (min-width: 576px){
-    .content-page1 .eye-i,
-    .content-page1 .eye-d {
-        height: 6.5em;
-        top: calc(50% - 3.25em);
+@media (min-width: 900px){
+    .content-page1 .form{
+        height: 6vh;
+        bottom: 31vh;
     }
-    .content-page1 .text {
-        top: calc(50% - 10em);
+    .content-page1 .input{
+        font-size: 3vh;
     }
-    .content-page1 .text img{
-        height: 5em;
-    }
-    .content-page1 .input {
-        font-size: 1.3em;
-        height: 70px;
-        max-width: 300px;
-    }
-    .content-page1 .text4 img{
-        width: 23vw;
-        top: 850px;
-        right: 25px;
+    .content-page1 .page-btn{
+        bottom: 25vh;
     }
 }
-@media (min-width: 768px){
-    .content-page1 .eye-i,
-    .content-page1 .eye-d {
-        width: auto;
-        height: 9em;
-        top: calc(50% - 53m);
+@media (min-width: 1080px){
+    .content-page1 .form{
+        height: 6vh;
+        bottom: 27vh;
     }
-    .content-page1 .text {
-        top: calc(50% - 10em);
+    .content-page1 .input{
+        font-size: 4vh;
     }
-    .content-page1 .text img{
-        width: 21em;
-    }
-    .content-page1 .input {
-        font-size: 1.5em;
-        height: 75px;
-        max-width: 350px;
-    }
-    .content-page1 .text4 img{
-        width: 19vw;
-        top: 840px;
-        right: 25px;
-    }
-}
-@media (min-width: 992px){
-    .content-page1 .eye-i,
-    .content-page1 .eye-d {
-        width: auto;
-        height: 13em;
-        top: calc(50% - 6.5em);
-    }
-    .content-page1 .text {
-        top: calc(50% - 12em);
-    }
-    .content-page1 .text img{
-        width: 21em;
-    }
-    .content-page1 .input {
-        font-size: 1.6em;
-        height: 75px;
-        max-width: 400px;
-    }
-    .content-page1 .text4 img{
-        width: 17vw;
-        top: 840px;
-        right: 25px;
+    .content-page1 .page-btn{
+        bottom: 19vh;
     }
 }
 @media (min-width: 1200px){
-    .content-page1 .eye-i,
-    .content-page1 .eye-d {
-        width: auto;
-        height: 14em;
-        top: calc(50% - 7em);
+    .content-page1 .form{
+        height: 7vh;
+        bottom: 21.5vh;
     }
-    .content-page1 .text {
-        top: calc(50% - 13em);
+    .content-page1 .input{
+        font-size: 4.2vh;
     }
-    .content-page1 .text img{
-        width: 24em;
-    }
-    .content-page1 .input {
-        font-size: 1.8em;
-        height: 80px;
-        max-width: 400px;
-    }
-    .content-page1 .text4 img{
-        width: 14vw;
-        top: 995px;
-        right: 25px;
+    .content-page1 .page-btn{
+        bottom: 11.5vh;
     }
 }

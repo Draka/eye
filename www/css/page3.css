@@ -36,95 +36,19 @@ html, body {
     height: 100%;
     cursor: pointer;
 }
-/*
-@media (min-width: 576px){
-    .content-page3 .fig{
-        height: 350px;
-        width: 350px;
-    }
-    .content-page3 .dot{
-        height: 350px;
-        width: 350px;
-    }
-    .content-page3 .eye-cal{
-        top: 90px;
-    }
-    .content-page3 .text7{
-        font-size: 23px;
-        width: 250px;
-        height: 150px;
-        line-height: 1;
-    }
-    .content-page3 .page-btn3 {
-        top: 425px;
+
+@media (min-width: 900px){
+    .content-page3 .page-btn3{
+        bottom: 21.5vh;
     }
 }
-
-@media (min-width: 768px){
-    .content-page3 .fig{
-        height: 400px;
-        width: 400px;
-    }
-    .content-page3 .dot{
-        height: 400px;
-        width: 400px;
-    }
-    .content-page3 .eye-cal{
-        top: 65px;
-    }
-    .content-page3 .text7{
-        font-size: 24px;
-        width: 250px;
-        height: 190px;
-        line-height: 1.1;
-    }
-    .content-page3 .page-btn3 {
-        top: 455px;
+@media (min-width: 1080px){
+    .content-page3 .page-btn3{
+        bottom: 16.5vh;
     }
 }
-
-@media (min-width: 992px){
-    .content-page3 .fig{
-        height: 450px;
-        width: 450px;
-    }
-    .content-page3 .dot{
-        height: 450px;
-        width: 450px;
-    }
-    .content-page3 .eye-cal{
-        top: 39px;
-    }
-    .content-page3 .text7{
-        font-size: 25px;
-        width: 300px;
-        height: 215px;
-        line-height: 1.2;
-    }
-    .content-page3 .page-btn3 {
-        top: 475px;
-    }
-}
-
 @media (min-width: 1200px){
-    .content-page3 .fig{
-        height: 500px;
-        width: 500px;
-    }
-    .content-page3 .dot{
-        height: 500px;
-        width: 500px;
-    }
-    .content-page3 .eye-cal{
-        top: 57px;
-    }
-    .content-page3 .text7{
-        font-size: 25px;
-        width: 350px;
-        height: 200px;
-        line-height: 1.3;
-    }
-    .content-page3 .page-btn3 {
-        top: 555px;
+    .content-page3 .page-btn3{
+        bottom: 7.5vh;
     }
 }

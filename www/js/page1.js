@@ -176,7 +176,7 @@ $('.ojo_feliz').on('click', function(){
                             if(step === 8){
                                 actions = true
                                 setTimeout(function(){
-                                    webgazer.pause()
+                                    webgazer.stopVideo()
                                     $('#plotting_canvas').hide('slow', function(){
                                         $('body').addClass('page6')
                                         document.getElementById("general").style.setProperty('background-color', '#f03c54')
